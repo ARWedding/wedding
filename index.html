@@ -20,7 +20,9 @@
       body {
         font-family: Arial, sans-serif;
       }
-
+      .main_body {
+        padding: 20px;
+      }
       .image-background {
         position: relative;
         width: 100%;
@@ -49,7 +51,7 @@
         width: 50%; /* Adjust the width of the separator line */
         margin: 20px auto; /* Center the separator horizontally and add space around it */
         border: none;
-        border-top: 3px solid #cb48ff; /* Change the color and style of the separator line */
+        border-top: 3px solid white; /* Change the color and style of the separator line */
       }
 
       .content {
@@ -57,36 +59,38 @@
         top: 50%;
         left: 20px; /* Adjust the left spacing of the content */
         transform: translateY(-50%);
-        background-color: rgb(236, 205, 253);
-        color: rgb(0, 0, 0);
+        /* background-color: rgb(236, 205, 253); */
+        color: #f6d27f;
+        text-align: center;
+        width: calc(100% - 40px);
         z-index: 1;
       }
 
       h1 {
-        font-size: 50px;
+        font-size: 45px;
         margin-bottom: 10px;
-        margin-left: 70px;
         font-family: "Dancing Script", cursive;
-        font-optical-sizing: auto;
+        /* font-optical-sizing: auto;
         font-weight: lighter;
-        font-style: normal;
+        font-style: normal; */
+      }
+      header {
+        text-align: center;
       }
       h2 {
         font-family: "Source Code Pro", monospace;
-        font-weight: lighter;
-        text-align: center;
+        font-weight: bold;
         padding: 20px 0;
       }
       h5 {
-        font-size: 18px;
-        margin-left: 80px;
+        font-size: 16px;
+
         font-family: "Source Code Pro", monospace;
         font-optical-sizing: auto;
         font: weight 10px;
         font-style: normal;
       }
       .venue-section {
-        padding: 50px 0;
         text-align: center;
       }
 
@@ -97,6 +101,7 @@
 
       .venue-container {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
       }
@@ -106,24 +111,70 @@
         padding: 20px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        flex-basis: 30%;
+        flex: 1 1 300px;
+        max-width: 300px;
       }
       .main_body {
-        background-color: rgb(255, 212, 246);
+        background-color: #f9c64d;
+        padding: 20px;
       }
       .venue img {
-        max-width: 300px;
+        max-width: 100%;
         height: auto;
+        margin-bottom: 10px;
       }
       footer {
         text-align: center;
         padding: 20px 0;
-        background-color: #333;
+        background-color: #3d4a22;
         color: #fff;
       }
       .p {
         line-height: 5%;
         padding-bottom: 5px;
+      }
+      @media screen and (max-width: 600px) {
+        .content {
+          left: 0;
+          width: 100%;
+          padding: 0 20px;
+        }
+
+        h1 {
+          font-size: 25px;
+        }
+
+        h3 {
+          font-size: 14px;
+        }
+
+        /* .venue {
+          /* flex-basis: calc(50% - 20px); 
+        } */
+        .image-background {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Adjust the height of the image background */
+        background-image: url("./carousel1.jpg"); /* Replace 'your-image.jpg' with the path to your image */
+        background: size 70px;;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      .image-background::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Semi-transparent black overlay */
+      }
       }
     </style>
   </head>
@@ -131,50 +182,55 @@
     <div class="image-background">
       <div class="content">
         <h1>Ramjith and Aswathy</h1>
-        <h5>12 MAY 2024</h5>
+        <h3 style="color: white">SAVE THE DATE.12 MAY 2024</h3>
       </div>
     </div>
     <div class="main_body">
       <header>
-        <h2 style="font-weight: bold">Our Venues</h2>
+        <h2 style="font-weight: bold; color: #3d4a22">OUR FUNCTIONS</h2>
         <hr class="separator" />
       </header>
       <section class="venue-section">
         <div class="venue-container">
           <div class="venue">
-            <h4 style="padding-bottom: 10px">WEDDING CEREMONY</h4>
+            <h4 style="padding-bottom: 10px">Wedding Ceremony</h4>
             <p
               style="
+                text-align: justify;
                 padding-bottom: 5px;
                 padding-top: 5px;
-                font-family: Source Code Pro, monospace;
+                font-family: Roboto, sans-serif;
+                font-weight: 400;
+                font-style: normal;
               "
             >
-              Bahadur Convention Center, Kara
+              <b>Venue</b>:Bahadur Convention Center, Kara<br /><br />
+              <b>Time</b>
+                :10:40 am to 11:27 am
             </p>
+
             <a href="https://maps.app.goo.gl/daYh3uLgbaLLG4ss6" target="_blank"
-              ><img
-                src="./bahadur.jpg"
-                alt="Venue Photo"
-              /><br />View on Map</a
+              ><img src="./bahadur.jpg" alt="Venue Photo" /><br />View on Map</a
             >
           </div>
           <div class="venue">
-            <h4 style="padding-bottom: 10px">RECEPTION</h4>
+            <h4 style="padding-bottom: 10px">Reception</h4>
             <p
               style="
+                text-align: justify;
                 padding-bottom: 5px;
                 padding-top: 5px;
-                font-family: Source Code Pro, monospace;
+                font-family: Roboto, sans-serif;
+                font-weight: 400;
+                font-style: normal;
               "
             >
-              SB Convention Center, Mullanbazar
+              <b>Venue:</b>SB Convention Center, Mullanbazar<br /><br />
+              <b>Time</b>: 5:30pm to 8:30pm
             </p>
             <a href="https://maps.app.goo.gl/nFNVWejp7sZTKBMF8" target="_blank"
-              ><img
-                src="./sb_convention.jpg"
-                alt="Venue Photo"
-              /><br />View on Map</a
+              ><img src="./sb_convention.jpg" alt="Venue Photo" /><br />View on
+              Map</a
             >
           </div>
         </div>
